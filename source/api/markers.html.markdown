@@ -10,12 +10,14 @@ Endpoint [GET]:
 | ------ | ------ |
 | **/api/[site_id]/markers.json** | Returns a list of markers |
 
+Paramaters:
 
-| Param | Type | Description  |
-| ------ | ------ | -----: |
-|  limit  |  number  |   Limit the  amount of markers returned  |
-|  count_only  |  boolean  |   (true/false) To only return a count  |
-
+| Param      | Type              | Description                           |
+| ---------- | ----------------- | ------------------------------------: |
+| from       | timestamp/integer | All times are UTC                     |
+| to         | timestamp/integer | All times are UTC                     |
+| limit      | number            | Limit the  amount of markers returned |
+| count_only | boolean           | (true/false) To only return a count   |
 
 ### Result
 
@@ -42,7 +44,6 @@ This endpoint returns the following JSON
     }
   ]
 }
-
 ```
 
 ## marker show
@@ -54,11 +55,11 @@ Endpoint [GET]:
 | ------ | ------ |
 | **/api/[site_id]/markers/[id].json** | Returns a list of markers |
 
+Parameters:
 
-| Param | Type | Description  |
-| ------ | ------ | -----: |
-|  id  |  string, required  |   ID of marker  |
-
+| Param | Type             | Description  |
+| ----- | ---------------- | -----------: |
+|  id   | string, required | ID of marker |
 
 
 ### Result
